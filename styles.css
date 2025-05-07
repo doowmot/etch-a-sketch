@@ -1,16 +1,20 @@
 .grid-container {
     display: flex;
     flex-wrap: wrap; 
-    max-width: 480px;
+    max-width: 960px;
 }
 
 .grid-square {
-    width: 30px;
-    height: 30px;
     border: 1px solid blue;
     box-sizing: border-box;
 }
 
 .on-mouse-over {
     background-color: red;
+}
+
+.grid-size-button {
+    width: 100px;
+    height: 30px;
+    margin: 30px;
 }

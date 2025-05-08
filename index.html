@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-sketch</title>
     <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {font-family: arcadeFont; src: url(PressStart2P-Regular.ttf);}
+    </style>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="sidebar"></div>
+            <h1> Etch-a-sketch</h1>
+            <button id="grid-size-btn" class="grid-size-button">Select grid size</button>
+            <button id="clear-btn" class="grid-size-button">Clear</button>
+        <div id=grid-container class="grid-container"></div>
 </body>
 </html>

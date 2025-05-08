@@ -1,6 +1,6 @@
-const gridContainer = document.createElement("div");
-gridContainer.classList.add("grid-container");
-document.body.appendChild(gridContainer);
+const gridSizeBtn = document.getElementById('grid-size-btn');
+const clearBtn = document.getElementById('clear-btn');
+const gridContainer = document.getElementById("grid-container")
 
 function createSquare(squareSize) {
     let newSquare = document.createElement("div");
@@ -34,16 +34,10 @@ function createGrid(size) {
 }
 
 function createGridSizeBtn() {
-    let gridSizeBtn = document.createElement("BUTTON");
-    gridSizeBtn.textContent = "Select grid size";
-    gridSizeBtn.classList.add("grid-size-button");
-    document.body.appendChild(gridSizeBtn);
-    
     gridSizeBtn.onclick = function() {
         let gridSize = prompt("Please select a grid size from 1-100: ");
         
         if (gridSize > 0 && gridSize <= 100) {
-            console.log(gridSize);
             createGrid(gridSize);
         } else {
             alert("Please enter a valid number: ");
@@ -51,9 +45,17 @@ function createGridSizeBtn() {
     };
 }
 
+function clearGrid() {
+    clearBtn.onclick = function() {
+        gridContainer.innerHTML = "";
+        createGrid();
+    };
+}
+
 function initApp() {
     createGridSizeBtn();
     createGrid();
+    clearGrid();
 }
 
 initApp();
